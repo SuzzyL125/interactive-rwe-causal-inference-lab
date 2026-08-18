@@ -1,0 +1,5 @@
+source("R/simulate_cohort.R");source("R/causal_methods.R");source("R/plots.R")
+dir.create("data/generated",recursive=TRUE,showWarnings=FALSE);dir.create("output/tables",recursive=TRUE,showWarnings=FALSE);dir.create("output/figures",recursive=TRUE,showWarnings=FALSE)
+d<-simulate_rwe_cohort();a<-estimate_effects(d);b<-balance_table(d,a$ps,a$weights)
+write.csv(d,"data/generated/synthetic_rwe_cohort.csv",row.names=FALSE);write.csv(a$effects,"output/tables/treatment_effects.csv",row.names=FALSE);write.csv(b,"output/tables/covariate_balance.csv",row.names=FALSE)
+ggplot2::ggsave("output/figures/love-plot.png",plot_love(b),width=8,height=5,dpi=160);ggplot2::ggsave("output/figures/overlap.png",plot_overlap(d,a$ps),width=8,height=5,dpi=160);ggplot2::ggsave("output/figures/forest-plot.png",plot_forest(a$effects,a$true_ate),width=8,height=5,dpi=160);ggplot2::ggsave("output/figures/bias-plot.png",plot_bias(a$effects,a$true_ate),width=8,height=5,dpi=160)

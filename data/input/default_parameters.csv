@@ -1,0 +1,9 @@
+parameter,value,description
+cohort_size,10000,Synthetic patients
+treatment_prevalence,0.40,Target prevalence of Drug A
+age_selection,0.35,Age effect on treatment selection
+comorbidity_selection,0.55,Comorbidity effect on treatment selection
+severity_selection,0.80,Disease severity effect on treatment selection
+unmeasured_confounding,0.00,Unmeasured factor effect on treatment and outcome
+positivity_stress,1.00,Multiplier applied to treatment-selection linear predictor
+true_odds_ratio,0.80,Conditional treatment odds ratio used in outcome generator
