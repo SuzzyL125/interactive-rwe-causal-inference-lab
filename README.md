@@ -2,13 +2,17 @@
 
 An interactive pharmacoepidemiology simulation showing how treatment-selection bias, positivity, unmeasured confounding, and analytical method choice change estimated comparative effectiveness.
 
+[![Launch Interactive Dashboard](https://img.shields.io/badge/Launch-Live%20RWE%20Dashboard-0072B2?style=for-the-badge)](https://suzzyl125.shinyapps.io/rwe-causal-inference-lab/)
+
+**[Open the live Shiny application](https://suzzyl125.shinyapps.io/rwe-causal-inference-lab/)**
+
 **Objective:** Demonstrate the full real-world evidence workflow—from cohort definition and Table 1 through propensity-score diagnostics, treatment-effect estimation, and assumption stress testing.
 
 **Methods:** Crude comparison, regression standardization, propensity-score matching, stabilized IPTW, doubly robust AIPW, standardized mean differences, overlap diagnostics, and bias benchmarking against a known simulated effect.
 
 **Primary estimand:** Average treatment effect of Drug A versus Drug B on one-year cardiovascular-event risk, reported as a risk difference.
 
-**Deliverables:** [Interactive Shiny app](app/app.R) | [HTML report](docs/index.html) | [Synthetic cohort](data/generated/synthetic_rwe_cohort.csv) | [Effect estimates](output/tables/treatment_effects.csv) | [Model code](R/)
+**Deliverables:** [Live dashboard](https://suzzyl125.shinyapps.io/rwe-causal-inference-lab/) | [Shiny source](app/app.R) | [HTML report](docs/index.html) | [Synthetic cohort](data/generated/synthetic_rwe_cohort.csv) | [Effect estimates](output/tables/treatment_effects.csv) | [Model code](R/)
 
 ## Dashboard guide
 
