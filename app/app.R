@@ -1,5 +1,6 @@
 library(shiny)
 library(ggplot2)
+library(markdown)
 root <- if (file.exists("R/simulate_cohort.R")) "." else ".."
 source(file.path(root,"R/simulate_cohort.R")); source(file.path(root,"R/causal_methods.R")); source(file.path(root,"R/plots.R"))
 
